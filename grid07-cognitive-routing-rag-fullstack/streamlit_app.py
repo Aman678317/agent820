@@ -1,9 +1,12 @@
 import sys
-import os
+from pathlib import Path
 import streamlit as st
 
-# Add backend to path so we can import directly
-sys.path.append(os.path.join(os.path.dirname(__file__), "backend"))
+ROOT_DIR = Path(__file__).resolve().parent
+BACKEND_DIR = ROOT_DIR / "backend"
+
+if str(BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKEND_DIR))
 
 from phase1_router import route_post_to_bots
 from phase2_langgraph_engine import generate_post
