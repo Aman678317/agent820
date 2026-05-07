@@ -1,6 +1,6 @@
 import sys
 from pathlib import Path
-import streamlit as st
+import streamlit as st  # type: ignore
 
 ROOT_DIR = Path(__file__).resolve().parent
 BACKEND_DIR = ROOT_DIR / "backend"
@@ -8,10 +8,10 @@ BACKEND_DIR = ROOT_DIR / "backend"
 if str(BACKEND_DIR) not in sys.path:
     sys.path.insert(0, str(BACKEND_DIR))
 
-from phase1_router import route_post_to_bots
-from phase2_langgraph_engine import generate_post
-from phase3_combat_rag import generate_defense_reply
-from chat_engine import generate_chat_answer
+from phase1_router import route_post_to_bots  # type: ignore
+from phase2_langgraph_engine import generate_post  # type: ignore
+from phase3_combat_rag import generate_defense_reply  # type: ignore
+from chat_engine import generate_chat_answer  # type: ignore
 
 st.set_page_config(page_title="Grid07 Cognitive RAG", layout="wide", page_icon="🤖")
 
