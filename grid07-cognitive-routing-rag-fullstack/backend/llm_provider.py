@@ -1,6 +1,6 @@
-import google.generativeai as genai
-from langchain_openai import ChatOpenAI
-from langchain.schema import HumanMessage, SystemMessage
+import google.generativeai as genai  # pyright: ignore[reportMissingImports]
+from langchain_openai import ChatOpenAI  # pyright: ignore[reportMissingImports]
+from langchain.schema import HumanMessage, SystemMessage  # pyright: ignore[reportMissingImports]
 from config import GEMINI_API_KEY, OPENAI_API_KEY, LLM_PROVIDER
 
 def get_active_provider():
